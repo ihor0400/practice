@@ -1,7 +1,7 @@
 package com.ihor.practice.service;
 
 import com.ihor.practice.dto.LessonDTO;
-import com.ihor.practice.model.Lesson; // Використовуємо правильну сутність
+import com.ihor.practice.model.Lesson;
 import com.ihor.practice.repository.LessonRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -19,17 +19,17 @@ public class LessonService {
         this.modelMapper = modelMapper;
     }
 
-    // Метод для створення нового уроку
+
     public LessonDTO createLesson(LessonDTO lessonDTO) {
-        Lesson lesson = modelMapper.map(lessonDTO, Lesson.class);  // Перетворюємо DTO в сутність Lesson
-        lesson = lessonRepository.save(lesson); // Зберігаємо в репозиторії
-        return modelMapper.map(lesson, LessonDTO.class);  // Повертаємо DTO
+        Lesson lesson = modelMapper.map(lessonDTO, Lesson.class);
+        lesson = lessonRepository.save(lesson);
+        return modelMapper.map(lesson, LessonDTO.class);
     }
 
-    // Метод для отримання всіх уроків
+
     public List<LessonDTO> getAllLessons() {
         return lessonRepository.findAll().stream()
-                .map(lesson -> modelMapper.map(lesson, LessonDTO.class))  // Перетворюємо кожен урок на DTO
+                .map(lesson -> modelMapper.map(lesson, LessonDTO.class))
                 .collect(Collectors.toList());
     }
 }

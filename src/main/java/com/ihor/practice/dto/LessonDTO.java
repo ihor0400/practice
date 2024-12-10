@@ -4,7 +4,7 @@ public class LessonDTO {
     private Long id;
     private String name;
 
-    // Геттери і сеттери
+
     public Long getId() {
         return id;
     }

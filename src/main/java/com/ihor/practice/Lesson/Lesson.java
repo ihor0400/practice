@@ -11,7 +11,6 @@ public class Lesson {
 
     private String name;
 
-    // Геттери і сеттери
     public Long getId() {
         return id;
     }
