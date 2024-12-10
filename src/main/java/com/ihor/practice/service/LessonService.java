@@ -1,7 +1,7 @@
 package com.example.schedule.service;
 
 import com.example.schedule.dto.LessonDTO;
-import com.example.schedule.model.Lesson;
+import com.ihor.practice.Lesson;
 import com.example.schedule.repository.LessonRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

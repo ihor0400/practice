@@ -1,4 +1,4 @@
-package com.example.schedule.model;
+package com.ihor.practice;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

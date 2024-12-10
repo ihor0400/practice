@@ -1,4 +1,4 @@
-package com.example.schedule.model;
+package com.ihor.practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
