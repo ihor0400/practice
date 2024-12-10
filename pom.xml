@@ -1,63 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.1.5</version>
 	</parent>
+
 	<groupId>com.ihor</groupId>
 	<artifactId>practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>practice</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
-		<java.version>23</java.version>
+		<java.version>17</java.version>
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+	</repositories>
+
+	<mirrors>
+		<mirror>
+			<id>maven-default</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
+
+
 	<dependencies>
+		<!-- Spring Boot Starter Data JPA - для роботи з базою даних -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!-- Spring Boot Starter Web - для створення RESTful сервісів -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- H2 Database - для тестування або вбудованої бази даних -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- Spring Boot Starter Test - для юніт-тестів -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Hibernate Core - для взаємодії з JPA (необхідно для Hibernate) -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.1.5.Final</version>
+		</dependency>
+
+		<!-- ModelMapper - для перетворення об'єктів -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<!-- Jakarta Validation API - для валідації об'єктів -->
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+		<!-- Jakarta Persistence API - для роботи з JPA -->
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version> <!-- Replace with the latest version if needed -->
+		</dependency>
+
+		<!-- Flyway - для управління міграціями бази даних -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>8.5.11</version>
+		</dependency>
 	</dependencies>
+
+	<proxies>
+		<proxy>
+			<id>example-proxy</id>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy.example.com</host>
+			<port>8080</port>
+			<username>less</username>
+			<password>1111</password>
+			<nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
+		</proxy>
+	</proxies>
 
 	<build>
 		<plugins>
+			<!-- Flyway Maven Plugin - для виконання міграцій бази даних -->
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>4.0.3</version>
+			</plugin>
+
+			<!-- Spring Boot Maven Plugin - для запуску Spring Boot додатка -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
