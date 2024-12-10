@@ -1,7 +1,7 @@
-package com.example.schedule.controller;
+package com.ihor.practice.controller;
 
-import com.example.schedule.dto.LessonDTO;
-import com.example.schedule.service.LessonService;
+import com.ihor.practice.dto.LessonDTO;
+import com.ihor.practice.service.LessonService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

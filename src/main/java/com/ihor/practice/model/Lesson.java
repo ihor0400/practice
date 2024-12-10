@@ -1,7 +1,14 @@
-package com.ihor.practice.dto;
+package com.ihor.practice.model;
 
-public class LessonDTO {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Lesson {
+
+    @Id
     private Long id;
+
     private String name;
 
     // Геттери і сеттери
