@@ -1,7 +1,9 @@
 package com.ihor.practice.model;
 
-import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Lesson {
@@ -10,16 +12,13 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
+    private String groupName;
+    private Integer lessonNumber;
+    private String lessonTime;
+    private String instructor;
+    private String dayOfWeek; // Нове поле
 
-    @Column(nullable = false)
-    private LocalDateTime time;
-
-    @Column(nullable = false)
-    private String teacher;
-
-    // Геттери та сеттери
+    // Конструктори, геттери та сеттери
     public Long getId() {
         return id;
     }
@@ -28,27 +27,43 @@ public class Lesson {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
-    public LocalDateTime getTime() {
-        return time;
+    public Integer getLessonNumber() {
+        return lessonNumber;
     }
 
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setLessonNumber(Integer lessonNumber) {
+        this.lessonNumber = lessonNumber;
     }
 
-    public String getTeacher() {
-        return teacher;
+    public String getLessonTime() {
+        return lessonTime;
     }
 
-    public void setTeacher(String teacher) {
-        this.teacher = teacher;
+    public void setLessonTime(String lessonTime) {
+        this.lessonTime = lessonTime;
+    }
+
+    public String getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(String instructor) {
+        this.instructor = instructor;
+    }
+
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public void setDayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
     }
 }

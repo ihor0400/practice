@@ -1,187 +1,20 @@
 {
-  "MONDAY": [
+  "Monday": [
     {
-      "groupName": "Group A",
+      "groupName": "1",
       "lessonNumber": 1,
-      "date": "2024-12-11T09:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group A",
-      "lessonNumber": 2,
-      "date": "2024-12-11T10:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 1,
-      "date": "2024-12-11T11:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 2,
-      "date": "2024-12-11T12:00:00",
-      "trainer": "J",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group C",
-      "lessonNumber": 1,
-      "date": "2024-12-11T13:00:00",
-      "trainer": "Alice Johnson",
-      "poolNumber": 3
+      "date": "2024-12-11",
+      "instructor": "Dr. Smith",
+      "dayOfWeek": "Monday"
     }
   ],
-  "TUESDAY": [
+  "Wednesday": [
     {
-      "groupName": "Group A",
-      "lessonNumber": 1,
-      "date": "2024-12-12T09:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group A",
+      "groupName": "2",
       "lessonNumber": 2,
-      "date": "2024-12-12T10:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 1,
-      "date": "2024-12-12T11:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 2,
-      "date": "2024-12-12T12:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group C",
-      "lessonNumber": 1,
-      "date": "2024-12-12T13:00:00",
-      "trainer": "A",
-      "poolNumber": 3
-    }
-  ],
-  "WEDNESDAY": [
-    {
-      "groupName": "Group A",
-      "lessonNumber": 1,
-      "date": "2024-12-13T09:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group A",
-      "lessonNumber": 2,
-      "date": "2024-12-13T10:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 1,
-      "date": "2024-12-13T11:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 2,
-      "date": "2024-12-13T12:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group C",
-      "lessonNumber": 1,
-      "date": "2024-12-13T13:00:00",
-      "trainer": "Alice Johnson",
-      "poolNumber": 3
-    }
-  ],
-  "THURSDAY": [
-    {
-      "groupName": "Group A",
-      "lessonNumber": 1,
-      "date": "2024-12-14T09:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group A",
-      "lessonNumber": 2,
-      "date": "2024-12-14T10:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 1,
-      "date": "2024-12-14T11:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 2,
-      "date": "2024-12-14T12:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group C",
-      "lessonNumber": 1,
-      "date": "2024-12-14T13:00:00",
-      "trainer": "Alice Johnson",
-      "poolNumber": 3
-    }
-  ],
-  "FRIDAY": [
-    {
-      "groupName": "Group A",
-      "lessonNumber": 1,
-      "date": "2024-12-15T09:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group A",
-      "lessonNumber": 2,
-      "date": "2024-12-15T10:00:00",
-      "trainer": "John Doe",
-      "poolNumber": 1
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 1,
-      "date": "2024-12-15T11:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group B",
-      "lessonNumber": 2,
-      "date": "2024-12-15T12:00:00",
-      "trainer": "Jane Smith",
-      "poolNumber": 2
-    },
-    {
-      "groupName": "Group C",
-      "lessonNumber": 1,
-      "date": "2024-12-15T13:00:00",
-      "trainer": "Alice Johnson",
-      "poolNumber": 3
+      "date": "2024-12-13",
+      "instructor": "Dr. Brown",
+      "dayOfWeek": "Wednesday"
     }
   ]
 }

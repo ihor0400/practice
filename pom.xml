@@ -26,15 +26,6 @@
 		</repository>
 	</repositories>
 
-	<mirrors>
-		<mirror>
-			<id>maven-default</id>
-			<url>https://repo.maven.apache.org/maven2</url>
-			<mirrorOf>*</mirrorOf>
-		</mirror>
-	</mirrors>
-
-
 	<dependencies>
 		<!-- Spring Boot Starter Data JPA - для роботи з базою даних -->
 		<dependency>
@@ -62,18 +53,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Hibernate Core - для взаємодії з JPA (необхідно для Hibernate) -->
+		<!-- Hibernate Validator (необхідно для валідації) -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>6.1.5.Final</version>
-		</dependency>
-
-		<!-- ModelMapper - для перетворення об'єктів -->
-		<dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>3.1.0</version>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.1.7.Final</version>
 		</dependency>
 
 		<!-- Jakarta Validation API - для валідації об'єктів -->
@@ -83,17 +67,11 @@
 			<version>3.0.2</version>
 		</dependency>
 
+		<!-- ModelMapper - для перетворення об'єктів -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 
 		<!-- Jakarta Persistence API - для роботи з JPA -->
@@ -115,20 +93,13 @@
 			<artifactId>flyway-core</artifactId>
 			<version>8.5.11</version>
 		</dependency>
-	</dependencies>
 
-	<proxies>
-		<proxy>
-			<id>example-proxy</id>
-			<active>true</active>
-			<protocol>http</protocol>
-			<host>proxy.example.com</host>
-			<port>8080</port>
-			<username>less</username>
-			<password>1111</password>
-			<nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
-		</proxy>
-	</proxies>
+		<!-- Spring Boot Starter Validation - для валідації -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

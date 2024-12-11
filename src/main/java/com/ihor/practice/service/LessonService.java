@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,11 +22,22 @@ public class LessonService {
     public List<LessonDTO> getSchedule() {
         return lessonRepository.findAll().stream()
                 .map(lesson -> new LessonDTO(
-                        lesson.getId(),
-                        lesson.getName(),
-                        lesson.getTime(),
-                        lesson.getTeacher()
+                        lesson.getGroupName(),
+                        lesson.getLessonNumber(),
+                        lesson.getLessonTime(),
+                        lesson.getInstructor(),
+                        lesson.getDayOfWeek()
                 ))
                 .collect(Collectors.toList());
+    }
+
+    public Map<String, List<LessonDTO>> getScheduleGroupedByDay() {
+        return getSchedule().stream()
+                .collect(Collectors.groupingBy(LessonDTO::getDayOfWeek));
+    }
+
+    public LessonDTO createLesson(LessonDTO lessonDTO) {
+
+        return lessonDTO;
     }
 }
