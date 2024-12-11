@@ -2,28 +2,23 @@ package com.ihor.practice.controller;
 
 import com.ihor.practice.dto.LessonDTO;
 import com.ihor.practice.service.LessonService;
-import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/lessons")
 public class LessonController {
     private final LessonService lessonService;
 
+    @Autowired
     public LessonController(LessonService lessonService) {
         this.lessonService = lessonService;
     }
 
-    @PostMapping
-    public ResponseEntity<LessonDTO> createLesson(@Valid @RequestBody LessonDTO lessonDTO) {
-        return ResponseEntity.ok(lessonService.createLesson(lessonDTO));
-    }
-
-    @GetMapping
-    public ResponseEntity<List<LessonDTO>> getAllLessons() {
-        return ResponseEntity.ok(lessonService.getAllLessons());
+    @GetMapping("/schedule")
+    public List<LessonDTO> getSchedule() {
+        return lessonService.getSchedule();
     }
 }
