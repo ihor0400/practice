@@ -18,7 +18,6 @@ public class Lesson {
     private String instructor;
     private String dayOfWeek; // Нове поле
 
-    // Конструктори, геттери та сеттери
     public Long getId() {
         return id;
     }
