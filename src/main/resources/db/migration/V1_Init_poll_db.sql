@@ -8,4 +8,3 @@ CREATE TABLE lessons (
                          time TIMESTAMP NOT NULL,
                          teacher VARCHAR(255) NOT NULL CHECK (teacher != '')
 );
-

@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000; // Або будь-який інший порт, який ви використовуєте
-
+const port = 3000;
 
 const schedule = require('./schedule.json');
 
@@ -12,7 +11,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/schedule', (req, res) => {
-    res.json(schedule.MONDAY); // Повертаємо графік на понеділок (або інші дні, якщо треба)
+    res.json(schedule.MONDAY);
 });
 
 app.listen(port, () => {
