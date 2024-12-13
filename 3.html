@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+</head>
+<body>
+<h2>Admin Panel - Lessons</h2>
+<form id="lesson-form">
+  <label for="lesson-topic">Topic:</label>
+  <input type="text" id="lesson-topic" name="topic" required>
+  <label for="lesson-time">Time:</label>
+  <input type="time" id="lesson-time" name="time" required>
+  <label for="lesson-teacher">Teacher:</label>
+  <input type="text" id="lesson-teacher" name="teacher" required>
+  <button type="submit">Add Lesson</button>
+</form>
+
+<h3>Existing Lessons</h3>
+<ul id="lessons-list"></ul>
+
+<script>
+  const lessons = [];
+  const form = document.getElementById('lesson-form');
+  const list = document.getElementById('lessons-list');
+
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    const topic = document.getElementById('lesson-topic').value;
+    const time = document.getElementById('lesson-time').value;
+    const teacher = document.getElementById('lesson-teacher').value;
+    lessons.push({ topic, time, teacher });
+    updateList();
+    form.reset();
+  };
+
+  function updateList() {
+    list.innerHTML = '';
+    lessons.forEach((lesson, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${lesson.topic} | ${lesson.time} | ${lesson.teacher}`;
+
+      const editButton = document.createElement('button');
+      editButton.textContent = 'Edit';
+      editButton.onclick = () => editLesson(index);
+
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.onclick = () => deleteLesson(index);
+
+      li.append(editButton, deleteButton);
+      list.append(li);
+    });
+  }
+
+  function editLesson(index) {
+    const lesson = lessons[index];
+    const newTopic = prompt('Edit topic:', lesson.topic);
+    const newTime = prompt('Edit time (HH:MM):', lesson.time);
+    const newTeacher = prompt('Edit teacher:', lesson.teacher);
+
+    if (newTopic && newTime && newTeacher) {
+      lessons[index] = { topic: newTopic, time: newTime, teacher: newTeacher };
+      updateList();
+    }
+  }
+
+  function deleteLesson(index) {
+    lessons.splice(index, 1);
+    updateList();
+  }
+</script>
+</body>
+</html>

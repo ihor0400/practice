@@ -1,0 +1,20 @@
+{
+  "Monday": [
+    {
+      "groupName": "1",
+      "lessonNumber": 1,
+      "date": "2024-12-11",
+      "instructor": "Dr. Smith",
+      "dayOfWeek": "Monday"
+    }
+  ],
+  "Wednesday": [
+    {
+      "groupName": "2",
+      "lessonNumber": 2,
+      "date": "2024-12-13",
+      "instructor": "Dr. Brown",
+      "dayOfWeek": "Wednesday"
+    }
+  ]
+}
